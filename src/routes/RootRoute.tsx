@@ -3,9 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from '@screens/Home'
 import React from 'react'
 
-import { RouteName } from './RootRoute.types'
+import { HomeStackParamList, RouteName } from './RootRoute.types'
 
-const HomeStack = createNativeStackNavigator()
+const HomeStack = createNativeStackNavigator<HomeStackParamList>()
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
