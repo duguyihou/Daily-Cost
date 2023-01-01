@@ -1,3 +1,4 @@
+import Home from '@pages/Home'
 import React from 'react'
 import {
   SafeAreaView,
@@ -24,14 +25,13 @@ function App() {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-      >
+        style={backgroundStyle}>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
+          }}>
           <Text>Daily Cost</Text>
+          <Home />
         </View>
       </ScrollView>
     </SafeAreaView>
