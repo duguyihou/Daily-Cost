@@ -1,1 +1,1 @@
-export {default as FeatOne} from './FeatOne'
+export { default as FeatOne } from './FeatOne'

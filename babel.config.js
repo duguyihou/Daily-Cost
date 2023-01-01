@@ -1,14 +1,14 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
-  plugins:[
+  plugins: [
     [
       'module-resolver',
       {
         alias: {
-          '@pages':'./src/pages',
-          '@features':'./src/features'
-        }
-      }
+          '@pages': './src/pages',
+          '@features': './src/features',
+        },
+      },
     ],
-  ]
+  ],
 }

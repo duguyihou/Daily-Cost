@@ -1,5 +1,6 @@
-import { FeatOne } from "@features/featOne"
-import { View } from "react-native"
+import { FeatOne } from '@features/featOne'
+import React from 'react'
+import { View } from 'react-native'
 
 function Home() {
   return (

@@ -1,6 +1,7 @@
-import {  Text, View } from 'react-native'
+import React from 'react'
+import { Text, View } from 'react-native'
 
-const FeatOne = () => {
+function FeatOne() {
   return (
     <View>
       <Text>Feat_one</Text>
