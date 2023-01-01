@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <Text>
+      Feat_one
+    </Text>
+  </View>
+  <Text>
+    Home
+  </Text>
+</View>
+`;
