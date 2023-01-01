@@ -31,6 +31,8 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
+        '@typescript-eslint/no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'prettier/prettier': ['error', {}, { usePrettierrc: true }],
         'no-use-before-define': 'off', // disable the rule for variables, but enable it for functions and classes
         '@typescript-eslint/no-shadow': ['error'],
