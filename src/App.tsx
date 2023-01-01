@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -6,15 +6,16 @@ import {
   Text,
   useColorScheme,
   View,
-} from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+} from 'react-native';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark'
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+
+const App = () => {
+  const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  }
+  };
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -24,18 +25,16 @@ function App() {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-      >
+        style={backgroundStyle}>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
+          }}>
           <Text>Daily Cost</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default App
+export default App;
