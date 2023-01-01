@@ -10,11 +10,6 @@ exports[`home 1`] = `
     }
   }
 >
-  <View>
-    <Text>
-      Card
-    </Text>
-  </View>
   <Text>
     Home
   </Text>
