@@ -1,3 +1,4 @@
+import Home from '@pages/Home'
 import React from 'react'
 import {
   SafeAreaView,
@@ -32,6 +33,7 @@ function App() {
           }}
         >
           <Text>Daily Cost</Text>
+          <Home />
         </View>
       </ScrollView>
     </SafeAreaView>
