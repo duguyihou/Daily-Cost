@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672541606054" clover="3.2.0">
+  <project timestamp="1672541606054" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1" elements="11" coveredelements="8" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="App.tsx" path="/Users/kong.hou/Github/DailyCost/src/App.tsx">
+      <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

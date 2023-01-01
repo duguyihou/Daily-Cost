@@ -6,7 +6,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "dev": "react-native start",
-    "test": "jest",
+    "test":"jest",
+    "test:watch": "jest --watch",
+    "test:ci":"jest --ci",
+    "test:coverage":"jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install"
   },
