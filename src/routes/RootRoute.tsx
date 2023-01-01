@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Home from '@screens/Home'
+import { Home } from '@screens/home'
 import React from 'react'
 
 import { HomeStackParamList, RouteName } from './RootRoute.types'
