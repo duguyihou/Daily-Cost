@@ -1,11 +1,11 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-function FeatOne() {
+function Card() {
   return (
     <View>
-      <Text>Feat_one</Text>
+      <Text>Card</Text>
     </View>
   )
 }
-export default FeatOne
+export default Card

@@ -1,11 +1,11 @@
-import { FeatOne } from '@features/featOne'
+import { Card } from '@features/bill'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 function Home() {
   return (
     <View style={styles.container}>
-      <FeatOne />
+      <Card />
       <Text>Home</Text>
     </View>
   )
