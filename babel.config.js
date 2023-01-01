@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@pages': './src/pages',
+          '@screens': './src/screens',
           '@features': './src/features',
         },
       },
