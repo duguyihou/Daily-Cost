@@ -66,4 +66,4 @@ buck-out/
 # local env files
 .env*.local
 
-/coverage
+coverage
