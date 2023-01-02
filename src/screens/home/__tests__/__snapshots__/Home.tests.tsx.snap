@@ -6,17 +6,98 @@ exports[`home 1`] = `
     Object {
       "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
     }
   }
 >
-  <View>
-    <Text>
-      Feat_one
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      Coles
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      29.90
     </Text>
   </View>
-  <Text>
-    Home
-  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      WWS
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      29.90
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      KFC
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+    >
+      13.90
+    </Text>
+  </View>
 </View>
 `;

@@ -18,7 +18,7 @@ const RootTab = createBottomTabNavigator()
 function RootRoute() {
   return (
     <RootTab.Navigator screenOptions={{ headerShown: false }}>
-      <RootTab.Screen name={RouteName.HomeStack} component={HomeStackScreen} />
+      <RootTab.Screen name={RouteName.HomeStack} component={HomeStackScreen} options={{ title: RouteName.Home }} />
     </RootTab.Navigator>
   )
 }
