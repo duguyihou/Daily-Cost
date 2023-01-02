@@ -1,15 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-function Card() {
+import { Card as CardProps } from './BillCard.types'
+
+function BillCard(cardProps: CardProps) {
+  const { title, value } = cardProps
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Coles</Text>
-      <Text style={styles.value}>$29.90</Text>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.value}>{value}</Text>
     </View>
   )
 }
-export default Card
+export default BillCard
 
 const styles = StyleSheet.create({
   container: {

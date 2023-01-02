@@ -1,1 +1,1 @@
-export { Card } from './components'
+export { BillCard } from './components'
