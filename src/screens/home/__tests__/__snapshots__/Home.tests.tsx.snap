@@ -9,6 +9,11 @@ exports[`home 1`] = `
     }
   }
 >
+  <View>
+    <Text>
+      MonthCardList
+    </Text>
+  </View>
   <View
     style={
       Object {

@@ -1,4 +1,5 @@
 import { BillCard, PlusButton } from '@features/bill'
+import { MonthCardList } from '@features/month/components'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
@@ -28,6 +29,7 @@ const cards = [
 function Home() {
   return (
     <View style={styles.container}>
+      <MonthCardList />
       {cards.map(({ id, title, value }) => (
         <BillCard key={id} title={title} value={value} />
       ))}
