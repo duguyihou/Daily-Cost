@@ -99,5 +99,73 @@ exports[`home 1`] = `
       13.90
     </Text>
   </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ef928f",
+        "borderRadius": 30,
+        "bottom": 30,
+        "opacity": 1,
+        "padding": 10,
+        "position": "absolute",
+        "right": 30,
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="28"
+      bbWidth="28"
+      focusable={false}
+      height={28}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {},
+          Object {
+            "flex": 0,
+            "height": 28,
+            "width": 28,
+          },
+        ]
+      }
+      vbHeight={512}
+      vbWidth={448}
+      width={28}
+    >
+      <RNSVGGroup>
+        <RNSVGPath
+          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+          fill={
+            Object {
+              "payload": 4278190080,
+              "type": 0,
+            }
+          }
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
 </View>
 `;

@@ -1,10 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import React from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 
-function Button() {
+import { ButtonProps, Size } from './Button.types'
+
+function Button(buttonProps: ButtonProps) {
+  const { icon, onPress, size = Size.MD, color, style } = buttonProps
+
   return (
-    <TouchableOpacity>
-      <Text>Button</Text>
+    <TouchableOpacity onPress={onPress} style={style}>
+      <FontAwesomeIcon icon={icon} color={color} size={size} />
     </TouchableOpacity>
   )
 }

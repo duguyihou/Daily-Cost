@@ -10,7 +10,8 @@
     "paths": {
       "@screens/*":["src/screens/*"],
       "@features/*":["src/features/*"],
-      "@components/*":["src/components/*"]
+      "@components/*":["src/components/*"],
+      "@shared/*":["src/shared/*"]
     },
   }
 }
