@@ -1,1 +1,1 @@
-export { BillCard } from './components'
+export { BillCard, PlusButton } from './components'

@@ -1,4 +1,4 @@
-import { BillCard } from '@features/bill'
+import { BillCard, PlusButton } from '@features/bill'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
@@ -13,6 +13,7 @@ function Home() {
       {cards.map(({ id, title, value }) => (
         <BillCard key={id} title={title} value={value} />
       ))}
+      <PlusButton />
     </View>
   )
 }
