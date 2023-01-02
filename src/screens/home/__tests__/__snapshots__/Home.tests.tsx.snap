@@ -9,10 +9,45 @@ exports[`home 1`] = `
     }
   }
 >
-  <View>
-    <Text>
-      MonthCardList
-    </Text>
+  <View
+    style={
+      Object {
+        "padding": 20,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        January 2020
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        109.90
+      </Text>
+    </View>
   </View>
   <View
     style={

@@ -9,6 +9,7 @@ module.exports = {
           '@features': './src/features',
           '@components': './src/components',
           '@shared': './src/shared',
+          '@utils': './src/utils',
         },
       },
     ],
