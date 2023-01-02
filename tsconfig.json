@@ -9,7 +9,9 @@
     "baseUrl": ".",
     "paths": {
       "@screens/*":["src/screens/*"],
-      "@features/*":["src/features/*"]
+      "@features/*":["src/features/*"],
+      "@components/*":["src/components/*"],
+      "@shared/*":["src/shared/*"]
     },
   }
 }

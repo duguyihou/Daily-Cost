@@ -1,11 +1,29 @@
-import { BillCard } from '@features/bill'
+import { BillCard, PlusButton } from '@features/bill'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 const cards = [
-  { id: 0, title: 'Coles', value: '29.90' },
-  { id: 1, title: 'WWS', value: '29.90' },
-  { id: 2, title: 'KFC', value: '13.90' },
+  {
+    id: 0,
+    title: 'Coles',
+    value: '29.90',
+    createdAt:
+      'Mon Jan 02 2023 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
+  },
+  {
+    id: 1,
+    title: 'WWS',
+    value: '29.90',
+    createdAt:
+      'Mon Jan 02 2023 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
+  },
+  {
+    id: 2,
+    title: 'KFC',
+    value: '13.90',
+    createdAt:
+      'Mon Jan 02 2023 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
+  },
 ]
 function Home() {
   return (
@@ -13,6 +31,7 @@ function Home() {
       {cards.map(({ id, title, value }) => (
         <BillCard key={id} title={title} value={value} />
       ))}
+      <PlusButton />
     </View>
   )
 }
