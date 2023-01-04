@@ -1,16 +1,19 @@
+import { useNavigation } from '@react-navigation/native'
+import { HomeStackNavigationProps, RouteName } from '@routes/RootRoute.types'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 import { MonthCardProps } from './MonthCard.types'
 
 function MonthCard(monthCardProps: MonthCardProps) {
   const { month, summary } = monthCardProps
-
+  const navigation = useNavigation<HomeStackNavigationProps>()
+  const handlePress = () => navigation.push(RouteName.Day, { month })
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handlePress}>
       <Text style={styles.month}>{month}</Text>
       <Text style={styles.summary}>{summary}</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 export default MonthCard

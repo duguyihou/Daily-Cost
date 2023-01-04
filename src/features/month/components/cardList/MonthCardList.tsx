@@ -4,14 +4,16 @@ import { StyleSheet, View } from 'react-native'
 
 import MonthCard from '../card/MonthCard'
 
-const month = date.getMonth(
-  'Mon Jan 02 2020 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
-)
-const summary = '109.90'
 function MonthCardList() {
+  const data = {
+    month: date.getMonth(
+      'Mon Jan 02 2020 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
+    ),
+    summary: '109.90',
+  }
   return (
     <View style={styles.container}>
-      <MonthCard month={month} summary={summary} />
+      <MonthCard month={data.month} summary={data.summary} />
     </View>
   )
 }

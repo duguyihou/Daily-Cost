@@ -6,6 +6,7 @@ import {
 
 export type HomeStackParamList = {
   Home: undefined
+  Day: { month: string }
 }
 
 export type HomeStackProps = NativeStackScreenProps<HomeStackParamList>
@@ -20,4 +21,5 @@ export type HomeRouteType<K extends keyof HomeStackParamList> = RouteProp<
 export enum RouteName {
   HomeStack = 'HomeStack',
   Home = 'Home',
+  Day = 'Day',
 }

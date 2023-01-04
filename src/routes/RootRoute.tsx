@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { Day } from '@screens/day'
 import { Home } from '@screens/home'
 import React from 'react'
 
@@ -10,6 +11,7 @@ function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen name={RouteName.Home} component={Home} />
+      <HomeStack.Screen name={RouteName.Day} component={Day} />
     </HomeStack.Navigator>
   )
 }

@@ -20,7 +20,7 @@ export default PlusButton
 const styles = StyleSheet.create({
   button: {
     position: 'absolute',
-    bottom: 30,
+    bottom: 100,
     right: 30,
     backgroundColor: theme.bg.primary,
     padding: 10,
