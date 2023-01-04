@@ -1,3 +1,4 @@
+import { PlusButton } from '@features/bill'
 import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
 
@@ -7,6 +8,7 @@ function Routes() {
   return (
     <NavigationContainer>
       <RootRoute />
+      <PlusButton />
     </NavigationContainer>
   )
 }

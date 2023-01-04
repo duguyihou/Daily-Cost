@@ -23,6 +23,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.37.0
   babel-jest: ^26.6.3
   babel-plugin-module-resolver: ^4.1.0
+  dayjs: ^1.11.7
   eslint: ^7.32.0
   eslint-config-airbnb: ^19.0.4
   eslint-config-prettier: ^8.5.0
@@ -51,6 +52,7 @@ dependencies:
   '@react-navigation/bottom-tabs': 6.5.2_5vsbgjpwqdsfei35nhrx3tqxau
   '@react-navigation/native': 6.1.1_ed6hdicvoe3mtgaxburxkml6qq
   '@react-navigation/native-stack': 6.9.7_5vsbgjpwqdsfei35nhrx3tqxau
+  dayjs: 1.11.7
   react: 18.1.0
   react-native: 0.70.6_rrp5rjlzavjwtpwddncroexzue
   react-native-safe-area-context: 4.4.1_ed6hdicvoe3mtgaxburxkml6qq
