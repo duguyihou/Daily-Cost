@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native'
-import { HomeStackNavigationProps, RouteName } from '@routes/RootRoute.types'
+import { HomeStackNavigationProps, RouteName } from '@routes/Routes.types'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
