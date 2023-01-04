@@ -4,7 +4,7 @@ import {
   HomeRouteType,
   HomeStackNavigationProps,
   RouteName,
-} from '@routes/RootRoute.types'
+} from '@routes/Routes.types'
 import React, { useLayoutEffect } from 'react'
 import { View } from 'react-native'
 
