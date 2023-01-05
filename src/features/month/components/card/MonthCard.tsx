@@ -10,7 +10,10 @@ function MonthCard(monthCardProps: MonthCardProps) {
   const navigation = useNavigation<HomeStackNavigationProps>()
   const handlePress = () => navigation.push(RouteName.Day, { month })
   return (
-    <TouchableOpacity style={styles.container} onPress={handlePress}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handlePress}
+      activeOpacity={1}>
       <Text style={styles.month}>{month}</Text>
       <Text style={styles.summary}>{summary}</Text>
     </TouchableOpacity>
