@@ -11,7 +11,10 @@ function YearCard(yearCardProps: YearCardProps) {
   const handlePress = () =>
     navigation.push(RouteName.Month, { year, ignore: true })
   return (
-    <TouchableOpacity style={styles.container} onPress={handlePress}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handlePress}
+      activeOpacity={1}>
       <Text style={styles.year}>{year}</Text>
       <Text style={styles.summary}>{summary}</Text>
     </TouchableOpacity>

@@ -1,16 +1,27 @@
 import { Button, ButtonSize } from '@components/elements'
+import BillContext, { Bill } from '@features/bill/models/Bill'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { theme } from '@shared/theme'
-import React from 'react'
+import React, { useCallback } from 'react'
 import { StyleSheet } from 'react-native'
 
 function PlusButton() {
-  const handlePlus = () => console.log('plus')
+  const { useRealm } = BillContext
+  const realm = useRealm()
+  const handlePlus = useCallback(
+    (title: string, value: string) => {
+      if (value.trim() === '') return
+      realm.write(() => {
+        realm.create('Bill', Bill.generate(title, value))
+      })
+    },
+    [realm],
+  )
   return (
     <Button
       icon={faPlus}
       size={ButtonSize.XL}
-      onPress={handlePlus}
+      onPress={() => handlePlus('KFC', '13.98')}
       style={styles.button}
     />
   )

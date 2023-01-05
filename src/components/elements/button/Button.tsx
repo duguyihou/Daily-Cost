@@ -8,7 +8,7 @@ function Button(buttonProps: ButtonProps) {
   const { icon, onPress, size = Size.MD, color, style } = buttonProps
 
   return (
-    <TouchableOpacity onPress={onPress} style={style}>
+    <TouchableOpacity onPress={onPress} style={style} activeOpacity={1}>
       <FontAwesomeIcon icon={icon} color={color} size={size} />
     </TouchableOpacity>
   )
