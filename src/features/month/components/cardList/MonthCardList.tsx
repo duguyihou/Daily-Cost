@@ -1,4 +1,4 @@
-import { date } from '@utils/date'
+import dayjs from 'dayjs'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
@@ -6,9 +6,7 @@ import MonthCard from '../card/MonthCard'
 
 function MonthCardList() {
   const data = {
-    month: date.getMonth(
-      'Mon Jan 02 2020 19:03:16 GMT+1100 (Australian Eastern Daylight Time)',
-    ),
+    month: dayjs().format('MMMM YYYY'),
     summary: '109.90',
   }
   return (
