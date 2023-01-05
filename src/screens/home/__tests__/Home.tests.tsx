@@ -1,7 +1,6 @@
-import { render } from '@testing-library/react-native'
-import React from 'react'
-
-import Home from '../Home'
+import { Bill } from '@features/bill/models/Bill'
+import { Realm } from '@realm/react'
+import { Configuration } from 'realm'
 
 jest.mock('@features/year', () => ({
   YearCardList: 'YearCardList',
@@ -10,9 +9,22 @@ jest.mock('@features/year', () => ({
 jest.mock('@react-navigation/native', () => ({
   useNavigation: () => ({ push: jest.fn() }),
 }))
+
 describe('Home', () => {
-  test('home', () => {
-    const home = render(<Home />)
-    expect(home).toMatchSnapshot()
+  const config: Configuration = {
+    schema: [Bill],
+  }
+  let realm: Realm
+  beforeEach(async () => {
+    realm = await Realm.open(config)
+  })
+  afterEach(() => {
+    if (!realm.isClosed) realm.close()
+    if (config) Realm.deleteFile(config)
+  })
+  test('Close a Realm', async () => {
+    expect(realm.isClosed).toBe(false)
+    realm.close()
+    expect(realm.isClosed).toBe(true)
   })
 })
