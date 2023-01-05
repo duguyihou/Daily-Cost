@@ -3,11 +3,16 @@ import React from 'react'
 
 import Home from '../Home'
 
-jest.mock('@features/month', () => ({
-  MonthCardList: 'MonthCardList',
+jest.mock('@features/year', () => ({
+  YearCardList: 'YearCardList',
 }))
 
-test('home', () => {
-  const home = render(<Home />)
-  expect(home).toMatchSnapshot()
+jest.mock('@react-navigation/native', () => ({
+  useNavigation: () => ({ push: jest.fn() }),
+}))
+describe('Home', () => {
+  test('home', () => {
+    const home = render(<Home />)
+    expect(home).toMatchSnapshot()
+  })
 })

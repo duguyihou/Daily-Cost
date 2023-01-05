@@ -11,6 +11,7 @@ module.exports = {
           '@shared': './src/shared',
           '@utils': './src/utils',
           '@routes': './src/routes',
+          '@hooks': './src/hooks',
         },
       },
     ],

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Day } from '@screens/day'
 import { Home } from '@screens/home'
+import { Month } from '@screens/month'
 import React from 'react'
 
 import { HomeStackParamList, RouteName } from './Routes.types'
@@ -13,6 +14,7 @@ function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen name={RouteName.Home} component={Home} />
+      <HomeStack.Screen name={RouteName.Month} component={Month} />
       <HomeStack.Screen name={RouteName.Day} component={Day} />
     </HomeStack.Navigator>
   )

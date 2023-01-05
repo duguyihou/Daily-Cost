@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`home 1`] = `
+exports[`Home home 1`] = `
 <View
   style={
     Object {
@@ -9,6 +9,6 @@ exports[`home 1`] = `
     }
   }
 >
-  <MonthCardList />
+  <YearCardList />
 </View>
 `;

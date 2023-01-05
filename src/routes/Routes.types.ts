@@ -6,6 +6,7 @@ import {
 
 export type HomeStackParamList = {
   Home: undefined
+  Month: { year: string; ignore: boolean }
   Day: { month: string }
 }
 
@@ -21,5 +22,6 @@ export type HomeRouteType<K extends keyof HomeStackParamList> = RouteProp<
 export enum RouteName {
   HomeStack = 'HomeStack',
   Home = 'Home',
+  Month = 'Month',
   Day = 'Day',
 }
