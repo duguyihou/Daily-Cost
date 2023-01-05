@@ -9,6 +9,7 @@ specifiers:
   '@fortawesome/fontawesome-svg-core': ^6.2.1
   '@fortawesome/free-solid-svg-icons': ^6.2.1
   '@fortawesome/react-native-fontawesome': ^0.3.0
+  '@react-native-async-storage/async-storage': ^1.17.11
   '@react-native-community/eslint-config': ^2.0.0
   '@react-navigation/bottom-tabs': ^6.5.2
   '@react-navigation/native': ^6.1.1
@@ -49,6 +50,7 @@ dependencies:
   '@fortawesome/fontawesome-svg-core': 6.2.1
   '@fortawesome/free-solid-svg-icons': 6.2.1
   '@fortawesome/react-native-fontawesome': 0.3.0_nbugciswjhri3m2uvahakylmme
+  '@react-native-async-storage/async-storage': 1.17.11_react-native@0.70.6
   '@react-navigation/bottom-tabs': 6.5.2_5vsbgjpwqdsfei35nhrx3tqxau
   '@react-navigation/native': 6.1.1_ed6hdicvoe3mtgaxburxkml6qq
   '@react-navigation/native-stack': 6.9.7_5vsbgjpwqdsfei35nhrx3tqxau
@@ -1955,6 +1957,15 @@ packages:
       tiny-glob: 0.2.9
       tslib: 2.4.1
     dev: true
+
+  /@react-native-async-storage/async-storage/1.17.11_react-native@0.70.6:
+    resolution: {integrity: sha512-bzs45n5HNcDq6mxXnSsOHysZWn1SbbebNxldBXCQs8dSvF8Aor9KCdpm+TpnnGweK3R6diqsT8lFhX77VX0NFw==}
+    peerDependencies:
+      react-native: ^0.0.0-0 || 0.60 - 0.71 || 1000.0.0
+    dependencies:
+      merge-options: 3.0.4
+      react-native: 0.70.6_rrp5rjlzavjwtpwddncroexzue
+    dev: false
 
   /@react-native-community/cli-clean/9.2.1:
     resolution: {integrity: sha512-dyNWFrqRe31UEvNO+OFWmQ4hmqA07bR9Ief/6NnGwx67IO9q83D5PEAf/o96ML6jhSbDwCmpPKhPwwBbsyM3mQ==}
@@ -5191,6 +5202,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /is-plain-obj/2.1.0:
+    resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-plain-object/2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
     engines: {node: '>=0.10.0'}
@@ -6242,6 +6258,13 @@ packages:
       type-fest: 0.18.1
       yargs-parser: 20.2.9
     dev: true
+
+  /merge-options/3.0.4:
+    resolution: {integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      is-plain-obj: 2.1.0
+    dev: false
 
   /merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
