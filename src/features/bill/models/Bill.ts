@@ -1,4 +1,4 @@
-import { createRealmContext, Realm } from '@realm/react'
+import { Realm } from '@realm/react'
 
 export class Bill extends Realm.Object {
   _id!: Realm.BSON.ObjectId
@@ -29,10 +29,3 @@ export class Bill extends Realm.Object {
     },
   }
 }
-
-const config = {
-  schema: [Bill],
-  deleteRealmIfMigrationNeeded: true,
-}
-
-export default createRealmContext(config)
