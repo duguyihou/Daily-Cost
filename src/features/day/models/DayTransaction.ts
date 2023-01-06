@@ -20,7 +20,7 @@ class DayTransaction extends Realm.Object {
     name: 'DayTransaction',
     primaryKey: '_id',
     properties: {
-      _id: 'objectedId',
+      _id: 'objectId',
       transactions: 'Bill[]',
       createdAt: 'date',
     },

@@ -3,7 +3,7 @@ import { DayTransaction } from '@features/day'
 import { createRealmContext } from '@realm/react'
 
 const config = {
-  schema: [Bill],
+  schema: [Bill, DayTransaction],
 
   deleteRealmIfMigrationNeeded: true,
 }

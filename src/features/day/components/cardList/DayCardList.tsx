@@ -8,9 +8,9 @@ import { cards } from './fakeData'
 import SectionHeader from './SectionHeader'
 
 function DayCardList() {
-  // const { useQuery } = RealmContext
-  // const dayTransactions = useQuery(DayTransaction)
-  // console.log('🐵 day ------ ', dayTransactions)
+  const { useQuery } = RealmContext
+  const dayTransactions = useQuery(DayTransaction)
+  console.log('🐵 day ------ ', dayTransactions)
   return (
     <View>
       <SectionList
