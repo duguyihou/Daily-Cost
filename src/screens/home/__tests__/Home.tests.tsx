@@ -1,4 +1,4 @@
-import { Bill } from '@features/bill/models/Bill'
+import { Bill } from '@features/bill'
 import { Realm } from '@realm/react'
 import { Configuration } from 'realm'
 

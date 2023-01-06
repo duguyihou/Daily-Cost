@@ -1,6 +1,6 @@
 import { Realm } from '@realm/react'
 
-export class Bill extends Realm.Object {
+class Bill extends Realm.Object {
   _id!: Realm.BSON.ObjectId
 
   title!: string
@@ -29,3 +29,5 @@ export class Bill extends Realm.Object {
     },
   }
 }
+
+export default Bill

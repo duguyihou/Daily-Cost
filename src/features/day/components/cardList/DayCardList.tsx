@@ -1,5 +1,5 @@
 import { BillCard } from '@features/bill'
-import { DayTransaction } from '@features/day/models/DayTransaction'
+import { DayTransaction } from '@features/day'
 import RealmContext from '@shared/RealmContext'
 import React from 'react'
 import { SectionList, View } from 'react-native'

@@ -1,4 +1,4 @@
-import { Bill } from '@features/bill/models/Bill'
+import { Bill } from '@features/bill'
 import { YearCardList } from '@features/year'
 import { useNavigation } from '@react-navigation/native'
 import { HomeStackNavigationProps, RouteName } from '@routes/Routes.types'
