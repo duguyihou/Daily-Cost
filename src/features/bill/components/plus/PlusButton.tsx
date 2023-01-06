@@ -1,5 +1,5 @@
 import { Button, ButtonSize } from '@components/elements'
-import { Bill } from '@features/bill/models/Bill'
+import { Bill } from '@features/bill'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import RealmContext from '@shared/RealmContext'
 import { theme } from '@shared/theme'

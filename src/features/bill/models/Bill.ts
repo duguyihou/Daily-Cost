@@ -13,7 +13,7 @@ class Bill extends Realm.Object {
     return {
       _id: new Realm.BSON.ObjectId(),
       title,
-      value,
+      value: Number(value),
       createdAt: new Date(),
     }
   }
@@ -24,7 +24,7 @@ class Bill extends Realm.Object {
     properties: {
       _id: 'objectId',
       title: 'string',
-      value: 'string',
+      value: 'double',
       createdAt: 'date',
     },
   }
