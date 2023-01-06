@@ -7,7 +7,7 @@ import {
 export type HomeStackParamList = {
   Home: undefined
   Month: { year: string; ignore: boolean }
-  Day: { month: string }
+  Day: { month: string; year: string }
 }
 
 export type HomeStackProps = NativeStackScreenProps<HomeStackParamList>

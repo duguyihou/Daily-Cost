@@ -6,9 +6,9 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { MonthCardProps } from './MonthCard.types'
 
 function MonthCard(monthCardProps: MonthCardProps) {
-  const { month, summary } = monthCardProps
+  const { month, summary, year } = monthCardProps
   const navigation = useNavigation<HomeStackNavigationProps>()
-  const handlePress = () => navigation.push(RouteName.Day, { month })
+  const handlePress = () => navigation.push(RouteName.Day, { month, year })
   return (
     <TouchableOpacity
       style={styles.container}

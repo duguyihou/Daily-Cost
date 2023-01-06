@@ -9,10 +9,10 @@ import React, { useLayoutEffect } from 'react'
 
 function Day() {
   const {
-    params: { month },
+    params: { month, year },
   } = useRoute<HomeRouteType<RouteName.Day>>()
   const navigation = useNavigation<HomeStackNavigationProps>()
   useLayoutEffect(() => navigation.setOptions({ title: month }))
-  return <DayCardList />
+  return <DayCardList month={month} year={year} />
 }
 export default Day

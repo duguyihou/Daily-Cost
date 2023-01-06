@@ -19,10 +19,10 @@ function Month() {
   useEffect(() => {
     if (!ignore) {
       const month = dayjs().format('MMMM')
-      navigation.push(RouteName.Day, { month })
+      navigation.push(RouteName.Day, { month, year })
     }
   })
 
-  return <MonthCardList />
+  return <MonthCardList year={year} />
 }
 export default Month
