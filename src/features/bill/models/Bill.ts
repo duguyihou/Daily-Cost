@@ -1,6 +1,6 @@
-import { createRealmContext, Realm } from '@realm/react'
+import { Realm } from '@realm/react'
 
-export class Bill extends Realm.Object {
+class Bill extends Realm.Object {
   _id!: Realm.BSON.ObjectId
 
   title!: string
@@ -13,7 +13,7 @@ export class Bill extends Realm.Object {
     return {
       _id: new Realm.BSON.ObjectId(),
       title,
-      value,
+      value: Number(value),
       createdAt: new Date(),
     }
   }
@@ -24,15 +24,10 @@ export class Bill extends Realm.Object {
     properties: {
       _id: 'objectId',
       title: 'string',
-      value: 'string',
+      value: 'double',
       createdAt: 'date',
     },
   }
 }
 
-const config = {
-  schema: [Bill],
-  deleteRealmIfMigrationNeeded: true,
-}
-
-export default createRealmContext(config)
+export default Bill

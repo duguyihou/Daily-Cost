@@ -1,9 +1,9 @@
-import BillContext from '@features/bill/models/Bill'
+import RealmContext from '@shared/RealmContext'
 import React from 'react'
 
 import { Routes } from './routes'
 
-const { RealmProvider } = BillContext
+const { RealmProvider } = RealmContext
 function App() {
   return (
     <RealmProvider>
