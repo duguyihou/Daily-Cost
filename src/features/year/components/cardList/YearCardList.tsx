@@ -8,15 +8,15 @@ import YearCard from '../card/YearCard'
 
 function YearCardList() {
   const { useQuery } = RealmContext
-  const currentYear = dayjs('2023-01-01T00:00:00').toDate()
-  const nextYear = dayjs('2024-01-01T00:00:00').toDate()
-  const summary = useQuery(Bill)
-    .filtered('createdAt BETWEEN {$0, $1}', currentYear, nextYear)
-    .sum('value')
-    .toFixed(2) // TODO: remove toFixed functions
+  const years = [
+    ...new Set(useQuery(Bill).map(bill => dayjs(bill.createdAt).year())),
+  ]
+
   return (
     <View style={styles.container}>
-      <YearCard year={dayjs().format('YYYY')} summary={summary} />
+      {years.map(year => (
+        <YearCard key={year} year={year.toString()} />
+      ))}
     </View>
   )
 }
@@ -25,6 +25,6 @@ export default YearCardList
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: 20,
+    paddingHorizontal: 20,
   },
 })

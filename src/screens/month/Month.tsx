@@ -10,7 +10,7 @@ import React, { useEffect, useLayoutEffect } from 'react'
 
 function Month() {
   const {
-    params: { year, ignore },
+    params: { year = dayjs().year().toString(), ignore },
   } = useRoute<HomeRouteType<RouteName.Month>>()
 
   const navigation = useNavigation<HomeStackNavigationProps>()
@@ -18,8 +18,8 @@ function Month() {
 
   useEffect(() => {
     if (!ignore) {
-      const month = dayjs().format('MMMM')
-      navigation.push(RouteName.Day, { month, year })
+      const monthNumber = dayjs().month()
+      navigation.push(RouteName.Day, { monthNumber, year })
     }
   })
 
