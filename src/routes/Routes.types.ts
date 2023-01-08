@@ -8,6 +8,7 @@ export type HomeStackParamList = {
   Home: undefined
   Month: { year: string; ignore: boolean }
   Day: { monthNumber: number; year: string }
+  New: undefined
 }
 
 export type HomeStackProps = NativeStackScreenProps<HomeStackParamList>
@@ -24,4 +25,5 @@ export enum RouteName {
   Home = 'Home',
   Month = 'Month',
   Day = 'Day',
+  New = 'New',
 }

@@ -1,28 +1,30 @@
 import { Button, ButtonSize } from '@components/elements'
-import { Bill } from '@features/bill'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import RealmContext from '@shared/RealmContext'
+import { useNavigation } from '@react-navigation/native'
+import { HomeStackNavigationProps, RouteName } from '@routes/Routes.types'
 import { theme } from '@shared/theme'
-import React, { useCallback } from 'react'
+import React from 'react'
 import { StyleSheet } from 'react-native'
 
 function PlusButton() {
-  const { useRealm } = RealmContext
-  const realm = useRealm()
-  const handlePlus = useCallback(
-    (title: string, value: string) => {
-      if (value.trim() === '') return
-      realm.write(() => {
-        realm.create('Bill', Bill.generate(title, value))
-      })
-    },
-    [realm],
-  )
+  // const { useRealm } = RealmContext
+  // const realm = useRealm()
+  // const handlePlus = useCallback(
+  //   (title: string, value: string) => {
+  //     if (value.trim() === '') return
+  //     realm.write(() => {
+  //       realm.create('Bill', Bill.generate(title, value))
+  //     })
+  //   },
+  //   [realm],
+  // )
+  const navigation = useNavigation<HomeStackNavigationProps>()
+  const handlePlus = () => navigation.navigate(RouteName.New)
   return (
     <Button
       icon={faPlus}
       size={ButtonSize.XL}
-      onPress={() => handlePlus('KFC', '13.98')}
+      onPress={handlePlus}
       style={styles.button}
     />
   )
