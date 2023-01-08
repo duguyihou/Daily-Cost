@@ -1,16 +1,11 @@
-import { Bill } from '@features/bill'
-import RealmContext from '@shared/RealmContext'
-import dayjs from 'dayjs'
+import { useYears } from '@features/year'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 import YearCard from '../card/YearCard'
 
 function YearCardList() {
-  const { useQuery } = RealmContext
-  const years = [
-    ...new Set(useQuery(Bill).map(bill => dayjs(bill.createdAt).year())),
-  ]
+  const years = useYears()
 
   return (
     <View style={styles.container}>

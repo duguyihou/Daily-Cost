@@ -1,6 +1,4 @@
-import { Bill } from '@features/bill'
-import RealmContext from '@shared/RealmContext'
-import dayjs from 'dayjs'
+import { useMonths } from '@features/month'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
@@ -8,16 +6,7 @@ import MonthCard from '../card/MonthCard'
 import { MonthCardListProps } from './MonthCardList.types'
 
 function MonthCardList({ year }: MonthCardListProps) {
-  const { useQuery } = RealmContext
-  const startOfYear = dayjs(`${Number(year)}`).toDate()
-  const endOfYear = dayjs(`${Number(year) + 1}`).toDate()
-  const months = [
-    ...new Set(
-      useQuery(Bill)
-        .filtered('createdAt BETWEEN {$0, $1}', startOfYear, endOfYear)
-        .map(bill => dayjs(bill.createdAt).month()),
-    ),
-  ]
+  const months = useMonths(year)
 
   return (
     <View style={styles.container}>
