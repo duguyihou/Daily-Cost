@@ -10,8 +10,9 @@ function YearCard(yearCardProps: YearCardProps) {
   const { year } = yearCardProps
 
   const navigation = useNavigation<HomeStackNavigationProps>()
-  const handlePress = () =>
+  const handlePress = () => {
     navigation.push(RouteName.Month, { year, ignore: true })
+  }
 
   const yearSummary = useYearSummary(year)
 

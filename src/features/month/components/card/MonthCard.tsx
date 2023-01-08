@@ -12,8 +12,9 @@ function MonthCard(monthCardProps: MonthCardProps) {
 
   const month = dayjs().month(monthNumber).format('MMM')
   const navigation = useNavigation<HomeStackNavigationProps>()
-  const handlePress = () =>
+  const handlePress = () => {
     navigation.push(RouteName.Day, { monthNumber, year })
+  }
 
   const monthSummary = useMonthSummary(year, monthNumber)
   return (

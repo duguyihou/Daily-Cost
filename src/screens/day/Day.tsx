@@ -12,6 +12,7 @@ function Day() {
   const {
     params: { monthNumber = dayjs().month(), year },
   } = useRoute<HomeRouteType<RouteName.Day>>()
+
   const navigation = useNavigation<HomeStackNavigationProps>()
   useLayoutEffect(() => {
     const title = dayjs().month(monthNumber).format('MMMM')
