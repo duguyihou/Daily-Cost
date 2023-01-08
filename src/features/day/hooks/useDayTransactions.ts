@@ -15,11 +15,9 @@ const useDayTransactions = (year: string, monthNumber: number) => {
     monthNumber,
   )
 
-  const data = useQuery(Bill).filtered(
-    'createdAt BETWEEN {$0, $1}',
-    startOfMonth,
-    endOfMonth,
-  )
+  const data = useQuery(Bill)
+    .filtered('createdAt BETWEEN {$0, $1}', startOfMonth, endOfMonth)
+    .sorted('createdAt', true)
 
   const days = [
     ...new Set(
@@ -32,7 +30,7 @@ const useDayTransactions = (year: string, monthNumber: number) => {
   days.forEach(day => {
     const dayTranactions = data.filter(e => dayjs(e.createdAt).day() === day)
     const tranaction = {
-      day: dayjs(new Date(Number(year), monthNumber + 1, day)).toDate(),
+      day: dayjs(new Date(Number(year), monthNumber, day)).toDate(),
       data: dayTranactions,
     }
 
