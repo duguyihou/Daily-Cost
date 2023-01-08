@@ -1,4 +1,5 @@
 import { Realm } from '@realm/react'
+import dayjs from 'dayjs'
 
 class Bill extends Realm.Object {
   _id!: Realm.BSON.ObjectId
@@ -14,7 +15,7 @@ class Bill extends Realm.Object {
       _id: new Realm.BSON.ObjectId(),
       title,
       value: Number(value),
-      createdAt: new Date(),
+      createdAt: dayjs().toDate(),
     }
   }
 

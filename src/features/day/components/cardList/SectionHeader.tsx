@@ -4,13 +4,14 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 type SectionHeaderProps = {
-  date: string
+  date: Date
 }
 function SectionHeader({ date }: SectionHeaderProps) {
-  const format = 'ddd DD'
+  const title = dayjs(date).format('ddd DD')
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{dayjs(date).format(format)}</Text>
+      <Text style={styles.title}>{title}</Text>
     </View>
   )
 }

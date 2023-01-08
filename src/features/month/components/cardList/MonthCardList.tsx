@@ -1,17 +1,18 @@
-import dayjs from 'dayjs'
+import { useMonths } from '@features/month'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 import MonthCard from '../card/MonthCard'
+import { MonthCardListProps } from './MonthCardList.types'
 
-function MonthCardList() {
-  const data = {
-    month: dayjs().format('MMMM YYYY'),
-    summary: '109.90',
-  }
+function MonthCardList({ year }: MonthCardListProps) {
+  const months = useMonths(year)
+
   return (
     <View style={styles.container}>
-      <MonthCard month={data.month} summary={data.summary} />
+      {months.map(month => (
+        <MonthCard key={month} monthNumber={month} year={year} />
+      ))}
     </View>
   )
 }

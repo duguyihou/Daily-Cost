@@ -5,14 +5,19 @@ import {
   HomeStackNavigationProps,
   RouteName,
 } from '@routes/Routes.types'
+import dayjs from 'dayjs'
 import React, { useLayoutEffect } from 'react'
 
 function Day() {
   const {
-    params: { month },
+    params: { monthNumber = dayjs().month(), year },
   } = useRoute<HomeRouteType<RouteName.Day>>()
+
   const navigation = useNavigation<HomeStackNavigationProps>()
-  useLayoutEffect(() => navigation.setOptions({ title: month }))
-  return <DayCardList />
+  useLayoutEffect(() => {
+    const title = dayjs().month(monthNumber).format('MMMM')
+    navigation.setOptions({ title })
+  })
+  return <DayCardList monthNumber={monthNumber} year={year} />
 }
 export default Day

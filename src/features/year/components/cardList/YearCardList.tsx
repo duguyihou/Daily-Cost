@@ -1,22 +1,17 @@
-import { Bill } from '@features/bill'
-import RealmContext from '@shared/RealmContext'
-import dayjs from 'dayjs'
+import { useYears } from '@features/year'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 import YearCard from '../card/YearCard'
 
 function YearCardList() {
-  const { useQuery } = RealmContext
-  const currentYear = dayjs('2023-01-01T00:00:00').toDate()
-  const nextYear = dayjs('2024-01-01T00:00:00').toDate()
-  const summary = useQuery(Bill)
-    .filtered('createdAt BETWEEN {$0, $1}', currentYear, nextYear)
-    .sum('value')
-    .toFixed(2) // TODO: remove toFixed functions
+  const years = useYears()
+
   return (
     <View style={styles.container}>
-      <YearCard year={dayjs().format('YYYY')} summary={summary} />
+      {years.map(year => (
+        <YearCard key={year} year={year.toString()} />
+      ))}
     </View>
   )
 }
@@ -25,6 +20,6 @@ export default YearCardList
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: 20,
+    paddingHorizontal: 20,
   },
 })

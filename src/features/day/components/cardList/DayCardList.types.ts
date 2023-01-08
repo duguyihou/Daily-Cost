@@ -1,4 +1,4 @@
-export type MonthCardProps = {
+export type DayCardListProps = {
   year: string
   monthNumber: number
 }
