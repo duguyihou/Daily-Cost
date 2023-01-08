@@ -5,3 +5,4 @@ export {
   TransactionTitle,
   TransactionValue,
 } from './components'
+export { default as useNewTransactionStore } from './store'

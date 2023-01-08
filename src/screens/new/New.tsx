@@ -6,6 +6,7 @@ import { View } from 'react-native'
 
 function New() {
   const navigation = useNavigation<HomeStackNavigationProps>()
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => <CloseButton />,
