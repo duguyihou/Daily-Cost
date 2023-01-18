@@ -1,3 +1,4 @@
+import { Layout } from '@components/layout'
 import { MonthCardList } from '@features/month'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import {
@@ -23,6 +24,10 @@ function Month() {
     }
   })
 
-  return <MonthCardList year={year} />
+  return (
+    <Layout>
+      <MonthCardList year={year} />
+    </Layout>
+  )
 }
 export default Month

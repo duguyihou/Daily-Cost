@@ -21,6 +21,6 @@ export default MonthCardList
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: 20,
+    paddingHorizontal: 20,
   },
 })
