@@ -23,14 +23,16 @@ const useDayTransactions = (year: string, monthNumber: number) => {
     ...new Set(
       useQuery(Bill)
         .filtered('createdAt BETWEEN {$0, $1}', startOfMonth, endOfMonth)
-        .map(bill => dayjs(bill.createdAt).day()),
+        .map(bill => dayjs(bill.createdAt).format('DD')),
     ),
   ]
   let tranactions: DayTransaction[] = []
   days.forEach(day => {
-    const dayTranactions = data.filter(e => dayjs(e.createdAt).day() === day)
+    const dayTranactions = data.filter(
+      e => dayjs(e.createdAt).format('DD') === day,
+    )
     const tranaction = {
-      day: dayjs(new Date(Number(year), monthNumber, day)).toDate(),
+      day: dayjs(new Date(Number(year), monthNumber, Number(day))).toDate(),
       data: dayTranactions,
     }
 
