@@ -1,3 +1,4 @@
+import { Layout } from '@components/layout'
 import { DayCardList } from '@features/day'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import {
@@ -18,6 +19,10 @@ function Day() {
     const title = dayjs().month(monthNumber).format('MMMM')
     navigation.setOptions({ title })
   })
-  return <DayCardList monthNumber={monthNumber} year={year} />
+  return (
+    <Layout>
+      <DayCardList monthNumber={monthNumber} year={year} />
+    </Layout>
+  )
 }
 export default Day

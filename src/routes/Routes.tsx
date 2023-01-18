@@ -1,4 +1,3 @@
-import { PlusButton } from '@features/bill'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -38,7 +37,6 @@ function Routes() {
           options={{ title: RouteName.Home }}
         />
       </RootTab.Navigator>
-      <PlusButton />
     </NavigationContainer>
   )
 }
