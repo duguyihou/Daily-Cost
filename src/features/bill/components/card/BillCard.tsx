@@ -6,10 +6,10 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { Card } from './BillCard.types'
 
 function BillCard(card: Card) {
-  const { title, value } = card
+  const { title, value, id } = card
   const navigation = useNavigation<HomeStackNavigationProps>()
   const handlePress = () => {
-    navigation.push(RouteName.Edit, { card })
+    navigation.push(RouteName.Edit, { id: id.toHexString() })
   }
   return (
     <TouchableOpacity

@@ -1,4 +1,3 @@
-import { Card } from '@features/bill/components/card'
 import { RouteProp } from '@react-navigation/native'
 import {
   NativeStackNavigationProp,
@@ -10,7 +9,7 @@ export type HomeStackParamList = {
   Month: { year: string; ignore: boolean }
   Day: { monthNumber: number; year: string }
   New: undefined
-  Edit: { card: Card }
+  Edit: { id: string }
 }
 
 export type HomeStackProps = NativeStackScreenProps<HomeStackParamList>
