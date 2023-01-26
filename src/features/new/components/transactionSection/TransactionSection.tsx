@@ -1,4 +1,4 @@
-import useNewTransactionStore from '@features/new/store'
+import { useTransactionStore } from '@features/bill'
 import React, { useEffect } from 'react'
 import { StyleSheet, View } from 'react-native'
 
@@ -8,7 +8,7 @@ import { TransactionSectionProps } from './TransactionSection.types'
 
 function TransactionSection(transactionSectionProps: TransactionSectionProps) {
   const { transaction: existingTransaction } = transactionSectionProps
-  const { transaction, setTitle, setValue, retrive } = useNewTransactionStore()
+  const { transaction, setTitle, setValue, retrive } = useTransactionStore()
   useEffect(() => {
     if (existingTransaction) {
       retrive(existingTransaction)

@@ -1,7 +1,7 @@
 import { Transaction } from '@features/bill/models/Bill'
 import create from 'zustand'
 
-type NewTransactionStore = {
+type TransactionStore = {
   transaction: {
     title: string
     value: string
@@ -17,7 +17,7 @@ const initialTransaction = {
   title: '',
   value: '',
 }
-const useNewTransactionStore = create<NewTransactionStore>(set => ({
+const useTransactionStore = create<TransactionStore>(set => ({
   transaction: initialTransaction,
   setTitle: (title: string) =>
     set(state => ({ transaction: { ...state.transaction, title } })),
@@ -30,4 +30,4 @@ const useNewTransactionStore = create<NewTransactionStore>(set => ({
   retrive: (transaction: Transaction) => set(() => ({ transaction })),
 }))
 
-export default useNewTransactionStore
+export default useTransactionStore
