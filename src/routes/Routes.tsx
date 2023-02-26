@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Day } from '@screens/day'
+import { Edit } from '@screens/edit'
 import { Home } from '@screens/home'
 import { Month } from '@screens/month'
 import { New } from '@screens/new'
@@ -17,6 +18,7 @@ function HomeStackScreen() {
         <HomeStack.Screen name={RouteName.Home} component={Home} />
         <HomeStack.Screen name={RouteName.Month} component={Month} />
         <HomeStack.Screen name={RouteName.Day} component={Day} />
+        <HomeStack.Screen name={RouteName.Edit} component={Edit} />
       </HomeStack.Group>
       <HomeStack.Group screenOptions={{ presentation: 'modal' }}>
         <HomeStack.Screen name={RouteName.New} component={New} />

@@ -14,7 +14,13 @@ function DayCardList({ monthNumber, year }: DayCardListProps) {
       <SectionList
         sections={dayTransactions}
         renderItem={({ item }) => (
-          <BillCard title={item.title} value={item.value} />
+          <BillCard
+            title={item.title}
+            value={item.value}
+            // eslint-disable-next-line no-underscore-dangle
+            id={item._id}
+            createdAt={item.createdAt}
+          />
         )}
         renderSectionHeader={({ section: { day } }) => (
           <SectionHeader date={day} />

@@ -1,9 +1,11 @@
 import { Realm } from '@realm/react'
 import dayjs from 'dayjs'
 
-type Transaction = {
+export type Transaction = {
+  id: string
   title: string
   value: string
+  createdAt: Date
 }
 class Bill extends Realm.Object {
   _id!: Realm.BSON.ObjectId
@@ -21,6 +23,15 @@ class Bill extends Realm.Object {
       title,
       value: Number(value),
       createdAt: dayjs().toDate(),
+    }
+  }
+
+  static update(transaction: Transaction) {
+    const { title, value, id } = transaction
+    return {
+      _id: new Realm.BSON.ObjectId(id),
+      title,
+      value: Number(value),
     }
   }
 
