@@ -17,7 +17,7 @@ const initialTransaction = {
   title: '',
   value: '',
 }
-const useTransactionStore = create<TransactionStore>(set => ({
+const useExsitingTransactionStore = create<TransactionStore>(set => ({
   transaction: initialTransaction,
   setTitle: (title: string) =>
     set(state => ({ transaction: { ...state.transaction, title } })),
@@ -30,4 +30,4 @@ const useTransactionStore = create<TransactionStore>(set => ({
   retrive: (transaction: Transaction) => set(() => ({ transaction })),
 }))
 
-export default useTransactionStore
+export default useExsitingTransactionStore

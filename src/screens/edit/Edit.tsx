@@ -11,11 +11,7 @@ function Edit() {
   } = useRoute<HomeRouteType<RouteName.Edit>>()
   const bill = useBillQuery(id)
 
-  return (
-    <View>
-      <TransactionSection transaction={bill} />
-    </View>
-  )
+  return <View>{/* <TransactionSection transaction={bill} /> */}</View>
 }
 
 export default Edit
